@@ -33,7 +33,15 @@
                   $pageTitle = 'Add Membership Type';
                 } elseif (strpos($_SERVER['REQUEST_URI'], 'dashboard.php') !== false) {
                   $pageTitle = 'Dashboard';
-                }
+                } elseif (strpos($_SERVER['REQUEST_URI'], 'add_product.php') !== false) {
+                  $pageTitle = 'Add Product';
+                } elseif (strpos($_SERVER['REQUEST_URI'], 'view_products.php') !== false) {
+                  $pageTitle = 'Manage Products';
+                }  elseif (strpos($_SERVER['REQUEST_URI'], 'edit_product.php') !== false) {
+                  $pageTitle = 'Edit Product';
+                }  elseif (strpos($_SERVER['REQUEST_URI'], 'delete_product.php') !== false) {
+                  $pageTitle = 'Delete Product';
+                } 
                 
                 echo '<h1 class="m-0 text-dark">' . $pageTitle . '</h1>';
                 ?>
