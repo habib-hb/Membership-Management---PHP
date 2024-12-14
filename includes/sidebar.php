@@ -108,6 +108,28 @@ function getLogoUrl()
               </li>
             </ul>
           </li>
+
+          <li class="nav-item  has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-box-open nav-icon"></i>
+              <p>Products</p>
+              <i class="fas fa-angle-left right"></i>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="add_type.php" class="nav-link">
+                  <i class="fas fa-circle-notch nav-icon"></i>
+                  <p>Add New</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="view_type.php" class="nav-link">
+                  <i class="fas fa-circle-notch nav-icon"></i>
+                  <p>View and Manage</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         
           <li class="nav-item">
             <a href="add_members.php" class="nav-link <?php echo ($current_page == 'add_members.php') ? 'active' : ''; ?>">
