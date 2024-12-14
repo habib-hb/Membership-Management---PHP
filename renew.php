@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $totalAmount = $_POST['totalAmount'];
     $renewDate = date('Y-m-d');
-    $insertRenewQuery = "INSERT INTO renew (member_id, total_amount, renew_date) VALUES ($memberId, $totalAmount, '$renewDate')";
+    $insertRenewQuery = "INSERT INTO renew_and_sales (member_id, total_amount, expenditure_type , renew_date) VALUES ($memberId, $totalAmount, 'Renewal', '$renewDate')";
     $insertRenewResult = $conn->query($insertRenewQuery);
 
     if ($updateMemberResult && $insertRenewResult) {

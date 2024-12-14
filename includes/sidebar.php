@@ -153,6 +153,13 @@ function getLogoUrl()
           </li>
 
           <li class="nav-item">
+            <a href="list_sale_products.php" class="nav-link <?php echo ($current_page == 'list_sale_products.php' || $current_page == 'sale_product.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-tags"></i>
+              <p>Sale Products</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="report.php" class="nav-link <?php echo ($current_page == 'report.php') ? 'active' : ''; ?>">
               <i class="nav-icon fas fa-file-invoice"></i>
               <p>Membership Report</p>

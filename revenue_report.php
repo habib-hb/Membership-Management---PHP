@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fromDate = $_POST['fromDate'];
     $toDate = $_POST['toDate'];
 
-    $reportQuery = "SELECT m.fullname, m.membership_number, r.total_amount, r.renew_date, s.currency
-                    FROM renew r
+    $reportQuery = "SELECT m.fullname, m.membership_number, r.total_amount, r.renew_date, r.expenditure_type ,s.currency
+                    FROM renew_and_sales r
                     JOIN members m ON r.member_id = m.id
                     LEFT JOIN settings s ON s.id = 1
                     WHERE r.renew_date BETWEEN '$fromDate' AND '$toDate'";
@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     echo '<tr>';
                     echo '<th>Member</th>';
                     echo '<th>Membership Number</th>';
+                    echo '<th>Expenditure Type</th>';
                     echo '<th>Total Amount</th>';
                     echo '<th>Date</th>';
                     echo '</tr>';
@@ -86,6 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                       echo '<tr>';
                       echo '<td>' . $row['fullname'] . '</td>';
                       echo '<td>' . $row['membership_number'] . '</td>';
+                      echo '<td>' . $row['expenditure_type'] . '</td>';
                       echo '<td>' . $row['currency'] . $row['total_amount'] . '</td>';
                       echo '<td>' . $row['renew_date'] . '</td>';
                       echo '</tr>';
