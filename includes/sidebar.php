@@ -61,6 +61,7 @@ function getLogoUrl()
 ?>
 
     <!-- Sidebar -->
+     <?php if($_SESSION['type'] == 'Admin'){ ?>
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -191,5 +192,136 @@ function getLogoUrl()
       </nav>
       <!-- /.sidebar-menu -->
     </div>
+    <?php } ?>
+
+
+    <?php if($_SESSION['type'] == 'Cashier'){ ?>
+      <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/2382414.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block"><?php echo $_SESSION['type']; ?></a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="dashboard.php" class="nav-link <?php echo ($current_page == 'dashboard.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item">
+            <a href="add_members.php" class="nav-link <?php echo ($current_page == 'add_members.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-users"></i>
+              <p>Add Members</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="manage_members.php" class="nav-link <?php echo ($current_page == 'manage_members.php' || $current_page == 'edit_member.php' || $current_page == 'memberProfile.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-users-cog"></i>
+              <p>Manage Members</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="list_renewal.php" class="nav-link <?php echo ($current_page == 'list_renewal.php' || $current_page == 'renew.php') ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-undo"></i>
+              <p>Renewal</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="list_sale_products.php" class="nav-link <?php echo ($current_page == 'list_sale_products.php' || $current_page == 'sale_products.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-tags"></i>
+              <p>Sale Products</p>
+            </a>
+          </li>
+
+       
+
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link <?php echo ($current_page == 'logout.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <?php } ?>
+
+
+
+    <?php if($_SESSION['type'] == 'Accountant'){ ?>
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/2382414.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block"><?php echo $_SESSION['type']; ?></a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="dashboard.php" class="nav-link <?php echo ($current_page == 'dashboard.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          
+       
+        
+
+          <li class="nav-item">
+            <a href="report.php" class="nav-link <?php echo ($current_page == 'report.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-file-invoice"></i>
+              <p>Membership Report</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="revenue_report.php" class="nav-link <?php echo ($current_page == 'revenue_report.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-money-check"></i>
+              <p>Revenue Report</p>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link <?php echo ($current_page == 'logout.php') ? 'active' : ''; ?>">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <?php } ?>
+
+
     <!-- /.sidebar -->
   </aside>

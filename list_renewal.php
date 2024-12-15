@@ -4,7 +4,7 @@ include('includes/config.php');
 $selectQuery = "SELECT * FROM members";
 $result = $conn->query($selectQuery);
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) || $_SESSION['type'] == 'Accountant') {
     header("Location: index.php");
     exit();
 }

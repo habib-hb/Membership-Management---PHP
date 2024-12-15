@@ -1,7 +1,7 @@
 <?php
 include('includes/config.php');
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) || $_SESSION['type'] !== 'Admin') {
     header("Location: index.php");
     exit();
 }
