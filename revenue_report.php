@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <div class="card-header">
                 <h3 class="card-title"><i class="fas fa-keyboard"></i> Revenue Report</h3>
               </div>
+
               
               <form method="post" action="">
                 <div class="card-body">
@@ -117,6 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <aside class="control-sidebar control-sidebar-dark">
   </aside>
 
+  
+
   <footer class="main-footer">
     <strong> &copy; <?php echo date('Y');?> codeastro.com</a> -</strong>
     All rights reserved.
@@ -124,6 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <b>Developed By</b> <a href="https://codeastro.com/">CodeAstro</a>
     </div>
   </footer>
+
+
 
   
 </div>

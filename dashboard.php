@@ -83,7 +83,7 @@ function getTotalRevenueWithCurrency()
         $currencySymbol = '$'; // Default currency symbol (you can change this as needed)
     }
 
-    $totalRevenueQuery = "SELECT SUM(total_amount) AS totalRevenue FROM renew";
+    $totalRevenueQuery = "SELECT SUM(total_amount) AS totalRevenue FROM renew_and_sales";
     $totalRevenueResult = $conn->query($totalRevenueQuery);
 
     if ($totalRevenueResult->num_rows > 0) {

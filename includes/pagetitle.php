@@ -41,6 +41,10 @@
                   $pageTitle = 'Edit Product';
                 }  elseif (strpos($_SERVER['REQUEST_URI'], 'delete_product.php') !== false) {
                   $pageTitle = 'Delete Product';
+                } elseif (strpos($_SERVER['REQUEST_URI'], 'list_sale_products.php') !== false) {
+                  $pageTitle = 'Sale Products';
+                } elseif (strpos($_SERVER['REQUEST_URI'], 'sale_products.php') !== false) {
+                  $pageTitle = 'Sale Products Form';
                 } 
                 
                 echo '<h1 class="m-0 text-dark">' . $pageTitle . '</h1>';
