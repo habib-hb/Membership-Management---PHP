@@ -130,6 +130,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 <option value="3">Three Months</option>
                                                 <option value="6">Six Months</option>
                                                 <option value="12">One Year</option>
+                                                <option value="24">Two Year</option>
+                                                <option value="36">Three Year</option>
+                                                <option value="48">Four Year</option>
+                                                <option value="60">Five Year</option>
                                             </select>
                                         </div>
                                        

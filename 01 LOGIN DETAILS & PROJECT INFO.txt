@@ -7,7 +7,23 @@
 **Recommended PHP Version 7**
 
 
+
 **Login Details**
 
+
 Email   : admin@mail.com
-Password: codeastro.com
+Password: habibhb1230
+
+
+
+--Working on--
+Email : cashier@mail.com
+Password: habibhb1230
+
+
+
+Email: accountant@mail.com
+Password: habibhb1230
+
+
+

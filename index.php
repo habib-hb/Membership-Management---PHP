@@ -2,6 +2,7 @@
 include('includes/config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     if (isset($_POST['login'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -19,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['email'] = $row['email'];
+                $_SESSION['type'] = $row['type'];
 
                 header("Location: dashboard.php");
                 exit();
@@ -27,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     }
+
 }
 ?>
 <head>
